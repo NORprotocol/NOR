@@ -12,7 +12,8 @@
 
 ---
 
-## 1. 项目概述（Overview）
+## 1. 项目概述（Overview）<img width="1778" height="1318" alt="image" src="https://github.com/user-attachments/assets/543baa17-578d-49b6-a7d7-0bb0248b31c2" />
+
 
 NOR Protocol 是一个以 **结构驱动收益（Structure-driven Yield）** 为核心理念的链上资产生长协议。
 
