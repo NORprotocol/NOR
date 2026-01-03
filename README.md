@@ -47,7 +47,7 @@
 - 用户选择复投后，资产将会被自动投入到生息池中，产生额外收益。
 - 所有复投收益将以 **倍增收益** 的方式加速增长，确保长期稳定的回报。
 
-![资产流动](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/asset_flow.png)
+![资产流动](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/asset_flow.png.png)
 
 ---
 
@@ -60,7 +60,7 @@
 1. **资金池的利用**：协议通过资金池的再投资和增长，为用户提供持续回报。
 2. **市场调整机制**：根据市场情况，智能合约会自动调整奖励机制和资产流动，确保市场的平衡和稳定。
 
-![经济循环模型](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/economic_cycle.png)
+![经济循环模型](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/economic_cycle.png.png)
 
 ---
 
@@ -75,7 +75,7 @@
 - **流动性奖励**：占总供应量的 40%。
 - **平台发展基金**：占总供应量的 25%。
 
-![代币经济学](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/tokenomics.png)
+![代币经济学](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/tokenomics.png.png)
 
 ---
 
@@ -88,7 +88,7 @@
 - **NFT功能**：玩家可以购买、销售和交易 NFT，获得独家虚拟物品。
 - **虚拟任务和奖励**：完成任务和挑战，获得丰厚奖励，提升游戏中的地位。
 
-![游戏图片](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/My_Neighbor_NOR_game_image.png)
+![游戏图片](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/My_Neighbor_NOR_game_image.png.png)
 
 ---
 
