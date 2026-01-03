@@ -1,476 +1,63 @@
+
+
 # NOR Protocol
 
-## Table of Contents
+## Membership System Overview
 
-* [Overview](#nor-protocol)
-* [Core Principles](#key-principles)
-* [Protocol Modules](#protocol-modules)
-* [Airdrop & Staking Flow](#airdrop--staking-flow)
-* [Minted Membership System](#7-铸造会员制度contract-oriented-specification)
-* [No-Pool Design Rationale](#8-no-pool-design-rationale为什么不设复利池)
-* [Risk Disclosure](#78-风险说明risk-disclosure)
+![NOR Membership System Table](./images/membership_table.png)
 
 ---
 
- ## 1. 项目概述 (Overview)
+## Asset Flow & Re-invest Mechanism
 
-<img
-  width="1778"
-  height="1318"
-  alt="NOR Protocol Overview"
-  src="https://github.com/user-attachments/assets/543baa17-578d-49b6-a7d7-0bb0248b31c2"
-/>
+![NOR Asset Flow](./images/asset_flow.png)
 
-NOR Protocol 是一个以 **结构驱动收益（Structure-driven Yield）** 为核心理念的链上资产生长协议。
-
-
-
-NOR Protocol 是一个以 **结构驱动收益（Structure-driven Yield）** 为核心理念的链上资产生长协议。
-
-协议不承诺价格、不制造短期刺激，而是通过 **身份权重、生息机制、复利选择权、SWAP 交易循环** 等结构性设计，让资产在长期运行中自然产生结果。
-
-NOR 的起点不是融资，而是 **空投**。
+- Mining rewards are automatically re-invested to the local node  
+- Users can withdraw assets on-chain, or choose 100% re-invest  
+- SWAP balance not used for trading  
+  → NOR can automatically flow into the yield pool to continue minting  
+  → This option can be enabled or disabled at any time  
 
 ---
 
-## 2. 空投体系（Airdrop System）
+## Minting to Yield Pool (3X Output)
 
-### 2.1 免费空投 · NORE（第一季）
+![NOR Minting Yield 3X](./images/mint_to_yield_3x.png)
 
-* 注册方式：
-
-  * 通过链接在 TP 钱包（BSC 链）注册
-* 每个地址可领取：
-
-  * **10,000 NORE（免费）**
-* 空投目的：
-
-  1. 体验 NOR 协议的基础流程与规则
-  2. 增加真实链上持币地址
-  3. 建立有效用户网络
-
-**规则说明：**
-
-* 一个 IP 仅允许一个有效账户
-* 不强制购买、不强制推广
+- Minted NOR can be optionally deposited into the yield pool  
+- Yield output after entering the pool:  
+  **3X**
 
 ---
 
-### 2.2 空投账户身份与权重
+## Hold-to-Earn Maximization (3 × NOR)
 
-在空投期间，账户将根据持币行为获得不同身份权重：
+![NOR Hold Earn 3XNOR](./images/hold_earn_3xnor.png)
 
-| 身份类型   | 条件       | 权重说明 |
-| ------ | -------- | ---- |
-| 免费空投账户 | 购买 < 2$  | 基础体验 |
-| 入门空投账户 | 购买 < 10$ | 低权重  |
-| 激活空投账户 | 购买 ≥ 10$ | 中权重  |
-| 正式空投账户 | 购买 ≥ 50$ | 高权重  |
-
-> 权重用于后续 **NOR 核心代币兑换、生息倍数计算**。
+- Users may choose the hold-to-earn strategy  
+- Maximum benefit model:  
+  **3 × NOR**
 
 ---
 
-## 3. 推荐与团队奖励机制
+## Referral Rewards & Team Dividend
 
-### 3.1 推荐奖励（空投阶段）
+![NOR Referral Rewards](./images/referral_rewards.png)
 
-* 推 ≤5 人：1000 NORE / 人
-* 推 ≥6 人：2000 NORE / 人
-* 推 ≥11 人：3000 NORE / 人
-
-奖励直接计入账户 NORE 余额。
+![NOR Team Dividend](./images/team_dividend.png)
 
 ---
 
-### 3.2 团队奖励（以个人已获得 NORE 为基数）
+## NOR Economic Cycle (Re-invest Model)
 
-| 团队人数  | 奖励比例 |
-| ----- | ---- |
-| ≥100  | 10%  |
-| ≥300  | 30%  |
-| ≥500  | 50%  |
-| ≥700  | 70%  |
-| ≥1000 | 100% |
+![NOR Economic Cycle](./images/economic_cycle.png)
 
-说明：
-
-* 采用大区 / 小区结构
-* 一个大区不包含其下所有小区的叠加
+> Terminology unified:  
+> ❌ Compound Interest  
+> ✅ **Re-invest (Minting Principal Reinforcement)**
 
 ---
 
-## 4. 协议解锁条件
+## NOR Value Flywheel
 
-* **2U 参与**：解锁协议基础功能
-
-账户类型：
-
-* <10U：入门账户
-* ≥10U：激活账户
-* ≥50U：正式账户
-
----
-
-## 5. 兑换机制（NORE → NOR）
-
-当第一季空投任务量完成后，协议将触发兑换流程：
-
-1. 根据个人权重 + NORE 持有量计算兑换比例
-2. NORE 兑换为 **NOR 核心代币**
-3. 兑换完成后：
-
-   * NOR 自动进入生息体系
-   * 产出的 NOR 可通过 SWAP 交易兑换为 USDT
-
----
-
-## 6. 生息与复利机制
-
-### 6.1 生息倍数
-
-| 身份   | 生息倍数   |
-| ---- | ------ |
-| 免费空投 | 1X NOR |
-| 正式空投 | 2X NOR |
-| 铸造会员 | 3X NOR |
-
-* 基础生息率：**1.0% / 天**
-
----
-
-### 6.2 SWAP 交易机制
-
-* SWAP 循环：
-
-  * **200% 净利润循环**
-* 收益分配：
-
-  * 70% → 钱包
-  * 30% → 自动复利
-
-用户可根据阶段选择是否继续复利。
-
----
-
-## 7. 铸造会员制度（Contract-Oriented Specification）
-
-> 本章节从 **智能合约与协议逻辑视角** 描述 NOR 铸造会员体系，用于开发、审计与高级用户理解。
->
-> 铸造会员系统 **不依赖、不继承、不影响** 免费空投或付费空投逻辑，是一套完全独立运行的协议模块。
-
----
-
-### 7.1 系统定位（System Scope）
-
-* 铸造会员是 NOR Protocol 中的 **独立收益模块**
-* 通过一次性铸造行为（Mint），进入长期生息与复利结构
-* 不参与 NORE → NOR 的空投兑换权重计算
-* 不受空投账户身份（免费 / 激活 / 正式）影响
-
-该模块设计目标：
-
-> 在不依赖拉新、不依赖空投释放的前提下，提供 **可持续、可计算、可退出** 的收益结构。
-
----
-
-### 7.2 铸造行为（Minting Logic）
-
-* 用户通过合约执行 `mintMembership()` 行为
-* 铸造成功后：
-
-  * 生成唯一会员状态（Membership State）
-  * 锁定初始本金（Principal）
-  * 激活独立收益计数器
-
-**关键特性：**
-
-* 铸造即生效
-* 不存在排队、抢购或批次限制
-* 不影响其他系统资金池
-
----
-
-### 7.3 收益倍率与本金加持（Yield Multiplier）
-
-* 固定收益倍率：**3X**
-
-  * 独立于 1X / 2X 空投生息体系
-* 本金加持机制：
-
-  * 铸造后的前 **15 天**
-  * 统一享受 **+20% 计算本金**
-
-> 本金加持仅影响收益计算，不改变可提取本金数额。
-
----
-
-### 7.4 复利结构（Compounding Architecture）
-
-铸造会员采用 **双层复利结构**：
-
-1. **前端自动复利层**
-
-   * 每日收益的 **30%** 自动进行复投，**直接计入铸造本金（Principal）**
-   * 不经过、也不存在任何独立“复利池”或中间资金池
-   * 该比例仅作为收益再投资的**计算路径描述**
-   * 计入后的本金参与后续收益计算
-   * 该机制不可关闭
-
-2. **后端可选复利层**
-
-   * 用户可选择是否将剩余收益继续复利
-   * 决策不影响本金安全
-
-该设计确保：
-
-* 系统具备基础增长动力
-* 用户保留完整决策权
-
----
-
-### 7.5 推荐与团队收益（Referral & Team Logic）
-
-* 直推奖励：**6% – 14%**
-
-  * 奖励直接计入本金
-  * 后续参与生息与复利计算
-
-* 团队分红：**10% – 40%**
-
-  * 随会员档位递增
-  * 自动计入收益池
-
-> 所有推荐与团队收益均通过合约计算，不经人工干预。
-
----
-
-### 7.6 收益流向与可选策略（Yield Routing & User Control）
-
-铸造会员产生的 NOR 收益，支持 **多路径、可开关** 的流向设计，由用户自主控制。
-
----
-
-#### 7.6.1 生息池路径（Staking Pool Routing）
-
-* 铸造产生的 NOR：
-
-  * **可选择不进行交易**
-  * 设置为 **每日自动进入生息池**
-* 该行为：
-
-  * 可随时开启 / 关闭
-  * 不影响已产生收益
-
-进入生息池后的 NOR，将继续参与生息计算（币本位）。
-
----
-
-#### 7.6.2 生息池内复利选择（On-chain Compounding）
-
-当 NOR 已进入生息池后，用户可进一步选择：
-
-* ✅ 开启自动复利：
-
-  * 生息产出的 NOR
-  * 自动复投并计入生息池本金（币本位）
-
-* ❌ 关闭自动复利：
-
-  * 生息产出的 NOR 不再计入本金
-
-该选择：
-
-* 完全自愿
-* 可随时调整
-
----
-
-#### 7.6.3 关闭生息后的收益流向（SWAP Routing）
-
-当用户关闭生息 / 复利选项后：
-
-* **新产出的收益**：
-
-  * 直接进入 SWAP 交易路径
-* 通过协议内 SWAP 机制：
-
-  * 执行交易循环
-  * 不影响既有本金
-
----
-
-### 7.7 独立性与风险隔离（Isolation Design）
-
-* 铸造会员系统：
-
-  * 不使用空投资金池
-  * 不承担空投系统负债
-  * 不影响 NORE / NOR 兑换逻辑
-
-该隔离设计用于：
-
-* 防止单一模块风险扩散
-* 提高整体协议稳定性
-
----
-
-## 8. No-Pool Design Rationale（为什么不设复利池）
-
-> 本章节讨论的是 **“复利 / 本金层面不设池子”**，
-> 并 **不否认 NOR 协议中存在可选的「持币生息池（Staking Pool）」模块**。
-> 两者属于 **不同层级、不同用途** 的设计。
-
----
-
-### 8.1 池子的类型区分（Critical Clarification）
-
-NOR Protocol 中存在且仅存在以下两类“池子”概念：
-
-1. **持币生息池（Staking Pool｜可选）**
-
-   * 用途：NOR 持币者参与生息、产出 NOR
-   * 对象：空投用户 / 持币用户 / 铸造用户（可选）
-   * 特性：
-
-     * 用户自愿进入
-     * 可随时开启 / 关闭
-     * 不构成铸造本金状态
-
-2. **SWAP 交易池（Swap Pool）**
-
-   * 用途：将产出的 NOR 进入交易路径
-   * 分为内部 SWAP 与后期外部 SWAP
-   * 不承载任何生息或复利状态
-
-**明确不存在的池子：**
-
-* 复利池（Compounding Pool）
-* 铸造本金池（Mint Pool）
-
----
-
-### 8.2 为什么不设「复利池 / 本金池」
-
-在 NOR 中：
-
-* 铸造会员的本金（Principal）
-
-  * 始终以 **用户级状态变量** 存在
-  * 不进入任何公共池子
-
-* 所谓“复利”：
-
-  * 只是收益再次计入本金的 **计算路径**
-  * 而非一个独立的资金聚合池
-
-该设计用于确保：
-
-* 本金不混合
-* 无集中可控资金点
-* 合约状态简单且可审计
-
----
-
-### 8.3 持币生息池的角色（Staking Pool Role）
-
-NOR 的 **持币生息池** 设计为：
-
-* 一个 **独立、可选的收益模块**
-* 主要用于：
-
-  * 空投 NOR 的生息产出
-  * 持币用户的长期参与
-
-流程逻辑为：
-
-1. NOR 进入生息池
-2. 产出新的 NOR（币本位）
-3. 用户选择：
-
-   * 继续留在生息池
-   * 或进入 SWAP 交易路径
-
-> 空投 NOR 必须先经过生息池产出，才能进入交易流程。
-
----
-
-### 8.4 设计总结（Design Summary）
-
-NOR Protocol 的池子设计可以总结为：
-
-* **有持币生息池（可选）**
-* **有 SWAP 交易池（执行用）**
-* **没有复利池 / 本金池**
-
-> 生息是模块，交易是路径，
-> 本金是状态，复利是计算。
-
-NOR Protocol 的核心设计原则可以总结为：
-
-* **本金是状态，收益是结果**
-* **路径可选，但状态唯一**
-* **交易与生息严格隔离**
-
-该设计用于最大限度降低系统复杂度，并确保协议行为可验证、可推导、可审计。
-
----
-
-### 7.8 风险说明（Risk Disclosure）
-
-* 收益来源依赖协议结构运行情况
-* 不保证固定回报
-* 用户需理解链上交互与合约风险
-
----
-
-## 8. 付费空投（NOR）
-
-* 与免费空投拥有同样的推广与生息逻辑
-* 但：
-
-  * **价值权重更高**
-  * **放大效率更强**
-
-适用于希望更快进入高权重体系的用户。
-
----
-
-## 9. NOR 协议经济模型（简述）
-
-NOR 协议包含三条并行但不互相干扰的系统：
-
-1. **NORE 免费空投系统**
-2. **NOR 付费空投系统**
-3. **NOR 铸造会员系统**
-
-每一条系统都有：
-
-* 独立生息
-* 独立权重
-* 独立收益路径
-
-避免单一系统崩塌带来的系统性风险。
-
----
-
-## 10. 风险与免责声明
-
-* NOR Protocol 不承诺固定收益
-* 所有产出均由协议结构自动计算
-* 用户需自行理解机制并承担链上操作风险
-
----
-
-## 11. 结语
-
-> NOR 协议不是为了制造暴利，
-> 而是构建一个 **可以长期运行的资产生长结构**。
-
-从空投开始，让资产进入生长轨道。
-
----
-
-**Version:** v0.1 (Draft)
-# NOR
-NOR 协议官方白皮书
+![NOR Final Overview](./images/final_overview.png)
