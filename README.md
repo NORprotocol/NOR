@@ -75,7 +75,7 @@ NOR协议系统是诺尔生态的核心。通过此系统，用户可以获得�
 - **流动性奖励**：占总供应量的 40%。
 - **平台发展基金**：占总供应量的 25%。
 
-![代币经济学](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/tokenomics.png)
+![代币经济学](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/tokenomics.png.png)
 
 
 
