@@ -5,7 +5,7 @@
 诺尔协议（NOR Protocol）旨在通过整合先进的奖励系统、模型和再投资策略，彻底革新区块链生态系统的运作方式。我们的目标是为数字经济提供一个无缝、可扩展且高效的系统。
 
 我们将去中心化金融（DeFi）与智能合约相结合，利用区块链技术的优势，为用户提供安全、透明、高效的金融解决方案。
-![NOR Protocol](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/asset_flow.png)
+![资产流动](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/asset_flow.png.png)
 ---
 
 ## 2. 会员系统概述
