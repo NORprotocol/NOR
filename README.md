@@ -124,5 +124,9 @@ NOR协议系统是诺尔生态的核心。通过此系统，用户可以获得�
 
 此表格展示了如何通过不同模块分配入金资金，确保协议的透明度，可持续性和公平性。
 
-![NOR分账逻辑](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/nor_division_logic.png)
+![NOR分账逻辑](https://raw.githubusercontent.com/NORprotocol/NOR/main/images/nor_division_logic.png) 
+
+《NOR冒险岛屿》游戏生态介绍：https://github.com/NORprotocol/NOR-Game-Ecology-
+
+《NOR白皮书介绍》https://github.com/NORprotocol/NOR-Protocol-Whitepaper
 
